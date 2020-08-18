@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,23 +8,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- CSS only -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css"
-    integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
+        integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
 
     <title>CowSay</title>
 </head>
 
 <body>
-    <nav class="nav flex-column" style="color: orangered;">
-        <a class="nav-link" href="/" style="color: orangered;">Home</a>
-        <a class="nav-link active" href="/history/" style="color: orangered;">Most Recent</a>
+    <nav class="nav flex-column">
+        <a class="nav-link" href="/">Home</a>
+        <a class="nav-link active" href="/history/">Most Recent</a>
     </nav>
-    <div class="container" style="color: orangered;">
-        <h1>Welcome to the Most Recent CowSay's</h1>
+    <div class="container">
+        <h1>10 Most Recent CowSay's</h1>
         <ul>
             {% for cowsay in cowsays %}
             <div class="card" style="width: 18rem;">
                 <div class="card-body">
-                    <a href="/recipe/{{recipe.id}}" class="card-link" style="color: orange;"><h5 class="card-title">{{ cowsay.text }}</h5></a>
+                    <h5 class="card-title">{{ cowsay.text }}</h5>
                     <p class="card-text">{{ cowsay.date }}</p>
                 </div>
             </div>
@@ -44,4 +46,3 @@
 </body>
 
 </html>
-

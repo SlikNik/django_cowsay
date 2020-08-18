@@ -1,7 +1,41 @@
 body{
-    background-color: black;
+    background-image: url('images/cow-pattern.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-weight: bolder;
+}
+
+a{
+    color: orangered;
+}
+
+.container{
+    color: orangered;
 }
 
 h1 {
     font-family: 'Lobster', cursive;
+    font-size: 65px;
+    text-align: center;
+    font-weight: bolder;
+
+}
+
+
+form, pre{
+    font-weight: bolder;
+    font-size: x-large;
+    text-align: center;
+    color: orangered;
+}
+
+button{
+    color: orangered;
+    background-image: url('images/cow-pattern.jpg');
+    font-weight: bolder;
+}
+
+pre{
+    background-color: black;
+    outline: 3px dashed orangered;
 }
