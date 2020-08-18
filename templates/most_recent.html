@@ -13,15 +13,11 @@
 </head>
 
 <body>
+    <nav class="nav flex-column" style="color: orangered;">
+        <a class="nav-link" href="/" style="color: orangered;">Home</a>
+        <a class="nav-link active" href="/history/" style="color: orangered;">Most Recent</a>
+    </nav>
     <div class="container" style="color: orangered;">
-        <ul class="nav nav-tabs" style="color: orangered;">
-            <li class="nav-item" >
-              <a class="nav-link" href="/" style="color: orangered;">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link {{ tab }}" href="/history/" style="color: orangered;">Most Recent</a>
-            </li>
-        </ul>
         <h1>Welcome to the Most Recent CowSay's</h1>
         <ul>
             {% for cowsay in cowsays %}
