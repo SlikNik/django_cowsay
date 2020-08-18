@@ -14,9 +14,9 @@ def index(request):
             output = form.get_cowsay(text)
             print(output)
             form.save()
-            return HttpResponseRedirect(reverse('homepage'))
+            return render(request, 'index.html',  {'form': form, 'tab': 'active', 'output': output.stdout})
     form = CowSayForm()
-    return render(request, 'index.html',  {'form': form, 'tab': 'active'})
+    return render(request, 'index.html',  {'form': form, 'tab': 'active', 'output': ''})
 
 
 def most_recent(request):

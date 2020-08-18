@@ -11,4 +11,4 @@ class CowSayForm(ModelForm):
 
     def get_cowsay(self, text):
         output = run(["cowsay", text],  stdout=PIPE, stderr=PIPE, universal_newlines=True)
-        return output.stdout
+        return output
