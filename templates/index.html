@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,6 +10,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
 
     <title>CowSay</title>
 </head>
@@ -22,7 +24,8 @@
         <h1>Welcome to CowSay!</h1>
 
         <pre style="color: orangered;">{{output}}</pre>
-        {% comment %} pre tag helps keep it's shape Resource https://www.geeksforgeeks.org/html-pre-tag/ {% endcomment %}
+        {% comment %} pre tag helps keep it's shape Resource https://www.geeksforgeeks.org/html-pre-tag/
+        {% endcomment %}
 
         <br>
         <form action="" method="POST" style="color: orangered;">
